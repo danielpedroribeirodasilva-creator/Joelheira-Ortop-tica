@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joelheira Ortopédica Premium</title>
+  <meta
+    name="description"
+    content="Alívio imediato para seus joelhos com tecnologia ortopédica de alta performance. Frete grátis, compra segura e opção de pagar só na entrega."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --navy-950: #071629;
+      --navy-900: #0b2038;
+      --navy-800: #123152;
+      --ice-50: #f7fafc;
+      --ice-100: #edf3f8;
+      --ice-200: #dce7f0;
+      --gold-500: #c8922a;
+      --gold-400: #d5a649;
+      --gold-200: rgba(200, 146, 42, 0.2);
+      --text-main: #f8fbff;
+      --text-soft: #c3d0dc;
+      --success: #9dd59d;
+      --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.28);
+      --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.2);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at top right, rgba(200, 146, 42, 0.12), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.06), transparent 24%),
+        linear-gradient(180deg, #071629 0%, #0b2038 52%, #081728 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+      position: relative;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid rgba(200, 146, 42, 0.35);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--gold-400);
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero {
+      padding: 28px 0 96px;
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(12px);
+      z-index: 0;
+    }
+
+    .hero::before {
+      width: 260px;
+      height: 260px;
+      top: 24px;
+      right: -90px;
+      background: rgba(200, 146, 42, 0.18);
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      bottom: 40px;
+      left: -60px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+    }
+
+    .brand span {
+      color: var(--gold-400);
+    }
+
+    .topbar-badge {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--ice-100);
+      font-size: 0.9rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1,
+    .section-title {
+      margin: 0 0 18px;
+      font-family: "Playfair Display", serif;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 7vw, 4.9rem);
+      max-width: 12ch;
+    }
+
+    .hero p {
+      max-width: 58ch;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+      margin: 0 0 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 26px;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .price-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 0 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .btn-primary,
+    .price-button {
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+      color: #071629;
+      box-shadow: 0 18px 30px rgba(200, 146, 42, 0.28);
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    .btn-primary:hover,
+    .price-button:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 22px 36px rgba(200, 146, 42, 0.38);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--ice-50);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      border-color: rgba(200, 146, 42, 0.5);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 18px 30px rgba(200, 146, 42, 0.28);
+      }
+      50% {
+        box-shadow: 0 22px 44px rgba(200, 146, 42, 0.48);
+      }
+    }
+
+    .trust-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: var(--ice-100);
+      font-size: 0.95rem;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(150deg, rgba(200, 146, 42, 0.2), transparent 35%);
+      pointer-events: none;
+    }
+
+    .hero-figure {
+      position: relative;
+      min-height: 480px;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top, rgba(200, 146, 42, 0.14), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(7, 22, 41, 0.3));
+      padding: 26px;
+    }
+
+    .product-gallery {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 16px;
+      align-items: stretch;
+      min-height: 320px;
+    }
+
+    .product-photo {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(227, 234, 241, 0.86)),
+        linear-gradient(180deg, rgba(200, 146, 42, 0.18), transparent);
+      min-height: 320px;
+    }
+
+    .product-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-photo-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      text-align: center;
+      color: #18314d;
+      font-weight: 700;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top, rgba(19, 49, 82, 0.08), transparent 30%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(223, 229, 235, 0.82));
+    }
+
+    .product-photo.has-image .product-photo-fallback {
+      display: none;
+    }
+
+    .photo-highlight {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      top: 14px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .photo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(7, 22, 41, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--ice-50);
+      font-size: 0.8rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-stats {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .stat-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(7, 22, 41, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .stat-card strong {
+      display: block;
+      color: var(--gold-400);
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .stat-card span {
+      font-size: 0.92rem;
+      color: var(--text-soft);
+    }
+
+    .delivery-strip {
+      margin-top: 26px;
+      padding: 18px 22px;
+      border-radius: 20px;
+      background: rgba(157, 213, 157, 0.08);
+      border: 1px solid rgba(157, 213, 157, 0.2);
+      color: #e7f7ea;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+    }
+
+    .delivery-strip strong {
+      color: var(--success);
+      font-size: 1rem;
+    }
+
+    .mobile-payment-note {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(200, 146, 42, 0.12);
+      border: 1px solid rgba(200, 146, 42, 0.22);
+      color: var(--ice-50);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+    }
+
+    .section-copy {
+      color: var(--text-soft);
+      line-height: 1.8;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .video-shell {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 18px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+      border: 1px solid rgba(200, 146, 42, 0.38);
+      box-shadow: var(--shadow-md);
+    }
+
+    video {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 20px;
+      background: #000;
+      outline: 3px solid rgba(200, 146, 42, 0.24);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
+    }
+
+    .benefits-grid,
+    .testimonials-grid,
+    .security-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .benefits-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .benefit-card,
+    .testimonial-card,
+    .security-card,
+    .price-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .benefit-card {
+      padding: 24px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200, 146, 42, 0.45);
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.24);
+    }
+
+    .benefit-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      background: rgba(200, 146, 42, 0.12);
+      color: var(--gold-400);
+    }
+
+    .benefit-card h3,
+    .price-card h3,
+    .testimonial-card h3,
+    .security-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+    }
+
+    .benefit-card p,
+    .price-card p,
+    .testimonial-card p,
+    .security-card p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    .pricing {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.03));
+    }
+
+    .pricing-note {
+      margin-top: 20px;
+      text-align: center;
+      color: #f0f6fb;
+      font-weight: 500;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      position: relative;
+      padding: 28px;
+      overflow: hidden;
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .price-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(200, 146, 42, 0.55);
+      box-shadow: 0 26px 46px rgba(0, 0, 0, 0.26);
+    }
+
+    .price-card.popular {
+      border: 1px solid rgba(200, 146, 42, 0.62);
+      background: linear-gradient(180deg, rgba(200, 146, 42, 0.12), rgba(255, 255, 255, 0.03));
+      transform: translateY(-6px);
+    }
+
+    .popular-badge,
+    .saving-badge {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .popular-badge {
+      top: 16px;
+      right: 16px;
+      padding: 8px 12px;
+      background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+      color: #071629;
+    }
+
+    .saving-badge {
+      left: 28px;
+      top: 18px;
+      padding: 7px 11px;
+      background: rgba(157, 213, 157, 0.14);
+      border: 1px solid rgba(157, 213, 157, 0.24);
+      color: #d4f0d4;
+    }
+
+    .kit-label {
+      margin-top: 28px;
+      color: var(--gold-400);
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .units {
+      margin: 10px 0 18px;
+      font-size: 1rem;
+      color: var(--ice-100);
+    }
+
+    .price {
+      margin: 0 0 6px;
+      font-family: "Playfair Display", serif;
+      font-size: 2.7rem;
+      color: var(--ice-50);
+    }
+
+    .unit-price {
+      margin-bottom: 18px;
+      color: var(--gold-400);
+      font-weight: 700;
+    }
+
+    .price-perks {
+      display: grid;
+      gap: 10px;
+      margin: 22px 0 28px;
+      color: var(--ice-100);
+      font-size: 0.95rem;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .testimonial-card {
+      padding: 26px;
+    }
+
+    .testimonial-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--gold-500), #e7c37a);
+      color: #071629;
+      font-weight: 800;
+    }
+
+    .stars {
+      margin-bottom: 14px;
+      color: #ffcf68;
+      letter-spacing: 0.18em;
+    }
+
+    .guarantee-box {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: stretch;
+      padding: 30px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(200, 146, 42, 0.12), rgba(255, 255, 255, 0.04));
+      border: 1px solid rgba(200, 146, 42, 0.28);
+      box-shadow: var(--shadow-md);
+    }
+
+    .guarantee-main {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .shield {
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      color: #071629;
+      background: linear-gradient(135deg, var(--gold-500), #e7c37a);
+      box-shadow: 0 18px 28px rgba(200, 146, 42, 0.22);
+    }
+
+    .guarantee-main h3 {
+      margin: 0 0 10px;
+      font-size: 1.6rem;
+      font-family: "Playfair Display", serif;
+    }
+
+    .guarantee-main p {
+      margin: 0;
+      line-height: 1.8;
+      color: var(--ice-100);
+    }
+
+    .security-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .security-card {
+      padding: 22px;
+    }
+
+    footer {
+      padding: 32px 0 54px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-soft);
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-400);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .guarantee-box,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 680px;
+        margin: 0 auto;
+      }
+
+      .product-gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .benefits-grid,
+      .testimonials-grid,
+      .security-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: min(calc(100% - 20px), var(--max-width));
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .hero {
+        padding: 20px 0 68px;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0 20px;
+      }
+
+      .topbar-badge {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero h1 {
+        max-width: none;
+        font-size: clamp(2.05rem, 10vw, 3rem);
+      }
+
+      .hero p,
+      .section-copy {
+        font-size: 0.98rem;
+        line-height: 1.7;
+      }
+
+      .benefits-grid,
+      .testimonials-grid,
+      .security-grid,
+      .pricing-grid,
+      .hero-stats,
+      .product-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card,
+      .video-shell,
+      .price-card,
+      .testimonial-card,
+      .benefit-card,
+      .security-card,
+      .guarantee-box {
+        border-radius: 22px;
+      }
+
+      .hero-figure {
+        min-height: auto;
+        padding: 16px;
+      }
+
+      .product-photo {
+        min-height: 260px;
+      }
+
+      .hero-stats {
+        position: static;
+        margin-top: 14px;
+      }
+
+      .stat-card {
+        padding: 14px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .price-button {
+        width: 100%;
+      }
+
+      .price {
+        font-size: 2.25rem;
+      }
+
+      .video-shell {
+        padding: 10px;
+      }
+
+      video {
+        border-radius: 16px;
+      }
+
+      .guarantee-box {
+        padding: 22px 18px;
+      }
+
+      .guarantee-main {
+        flex-direction: column;
+      }
+
+      .shield {
+        width: 60px;
+        height: 60px;
+      }
+
+      .guarantee-main h3 {
+        font-size: 1.35rem;
+      }
+
+      .footer-wrap {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .mobile-payment-note {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="topbar reveal">
+        <div class="brand">Joelheira <span>Ortopédica</span> Premium</div>
+        <div class="topbar-badge">Pague só na entrega • Frete grátis</div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">Tecnologia ortopédica premium</div>
+          <h1>Alívio Imediato para Seus Joelhos — Tecnologia Ortopédica de Alta Performance</h1>
+          <p>Desenvolvida por especialistas em ortopedia para quem não pode parar. Mais estabilidade, conforto e segurança em cada passo, com opção de pagar só quando receber no conforto da sua casa.</p>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="#precos">Comprar Agora → Ver Ofertas</a>
+            <a class="btn-secondary" href="#video">Ver Como Funciona</a>
+          </div>
+
+          <div class="trust-inline" aria-label="credibilidade">
+            <span>✓ Aprovado por ortopedistas</span>
+            <span>✓ Frete grátis</span>
+            <span>✓ Compra 100% segura</span>
+          </div>
+
+          <div class="delivery-strip">
+            <strong>✓ Pague só na entrega</strong>
+            <span>Mais confiança para comprar sem risco e sem pressão.</span>
+          </div>
+
+          <div class="mobile-payment-note">
+            Receba com tranquilidade e finalize como preferir, com destaque para a opção de pagamento na entrega.
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="hero-figure">
+            <div class="product-gallery">
+              <figure class="product-photo">
+                <img
+                  src="./assets/joelheira-1.png"
+                  alt="Joelheira ortopédica com faixas ajustáveis"
+                  onload="this.parentElement.classList.add('has-image')"
+                  onerror="this.remove()"
+                >
+                <div class="photo-highlight">
+                  <span class="photo-pill">Foto do produto</span>
+                </div>
+                <div class="product-photo-fallback">Adicione aqui a foto principal da joelheira em <strong>assets/joelheira-1.png</strong>.</div>
+              </figure>
+
+              <figure class="product-photo">
+                <img
+                  src="./assets/joelheira-2.png"
+                  alt="Detalhe da joelheira ortopédica com foco no alívio do joelho"
+                  onload="this.parentElement.classList.add('has-image')"
+                  onerror="this.remove()"
+                >
+                <div class="photo-highlight">
+                  <span class="photo-pill">Alívio e suporte</span>
+                </div>
+                <div class="product-photo-fallback">Adicione aqui a segunda foto em <strong>assets/joelheira-2.png</strong>.</div>
+              </figure>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-card">
+                <strong>Suporte premium</strong>
+                <span>Compressão estável para aliviar o impacto no joelho.</span>
+              </div>
+              <div class="stat-card">
+                <strong>Pagamento na entrega</strong>
+                <span>Você recebe primeiro e paga com mais tranquilidade.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="video">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Demonstração real</div>
+          <h2 class="section-title">Veja como a Joelheira Ortopédica funciona</h2>
+          <p class="section-copy">Um ajuste inteligente, estável e confortável para reduzir o desconforto e dar mais firmeza à sua rotina.</p>
+        </div>
+
+        <div class="video-shell reveal">
+          <video controls preload="metadata" playsinline>
+            <source src="https://storage.googleapis.com/code-translate-c9640.appspot.com/free_audio_conversions/8b2796c2-4c41-41aa-be2a-46dea85cde7e.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Benefícios principais</div>
+          <h2 class="section-title">Conforto clínico para usar todos os dias</h2>
+          <p class="section-copy">Cada detalhe foi pensado para unir tecnologia ortopédica, respirabilidade e ajuste seguro em qualquer rotina.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 3v7a4 4 0 0 0 8 0V3"></path>
+                <path d="M8 12v3a4 4 0 1 0 8 0v-3"></path>
+                <path d="M9 21h6"></path>
+              </svg>
+            </div>
+            <h3>Suporte total ao joelho</h3>
+            <p>Firmeza extra para reduzir a instabilidade e dar mais segurança ao caminhar, subir escadas ou permanecer em pé.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"></path>
+              </svg>
+            </div>
+            <h3>Alívio imediato da dor</h3>
+            <p>A compressão anatômica ajuda a aliviar a pressão no joelho desde os primeiros usos.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M13 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"></path>
+                <path d="M4 20c1.5-3.5 4.3-5 7.6-5"></path>
+                <path d="M15 13l5 1-3 6"></path>
+              </svg>
+            </div>
+            <h3>Ideal para o dia a dia</h3>
+            <p>Perfeita para tarefas domésticas, caminhada, trabalho e atividades leves com mais conforto e estabilidade.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3 4 7v5c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V7l-8-4Z"></path>
+                <path d="m9.5 12 1.7 1.7L15 10"></path>
+              </svg>
+            </div>
+            <h3>Recomendada por ortopedistas</h3>
+            <p>Conceito funcional alinhado ao que pacientes buscam em suporte, proteção e confiança durante o uso.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s7-4.3 7-11a7 7 0 1 0-14 0c0 6.7 7 11 7 11Z"></path>
+                <path d="M10 10c0 1.1.9 2 2 2s2 .9 2 2"></path>
+              </svg>
+            </div>
+            <h3>Material antialérgico e respirável</h3>
+            <p>Tecido confortável com boa ventilação para uso prolongado, sem sensação excessiva de abafamento.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+                <path d="M7 7c3 3 7 3 10 0"></path>
+                <path d="M7 17c3-3 7-3 10 0"></path>
+              </svg>
+            </div>
+            <h3>Ajuste perfeito para todos os tamanhos</h3>
+            <p>Modelagem flexível para se adaptar melhor ao contorno da perna com firmeza e conforto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="precos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Ofertas especiais</div>
+          <h2 class="section-title">Escolha o kit ideal para sua recuperação e rotina</h2>
+          <p class="section-copy">Compre com mais tranquilidade: pagamento seguro e destaque para a opção de pagar só na entrega.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <div class="kit-label">Kit 1</div>
+            <h3>1 unidade</h3>
+            <p class="units">Ideal para começar a sentir o suporte ortopédico.</p>
+            <div class="price">R$ 120,00</div>
+            <div class="unit-price">R$ 120,00 por unidade</div>
+            <div class="price-perks">
+              <span>✓ Frete grátis</span>
+              <span>✓ Compra 100% segura</span>
+              <span>✓ Pague só na entrega</span>
+            </div>
+            <a class="price-button" href="https://entrega.logzz.com.br/pay/programa-afiliados-remarketing" target="_blank" rel="noopener noreferrer">Quero Este Kit →</a>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="kit-label">Kit 2</div>
+            <h3>2 unidades</h3>
+            <p class="units">Mais praticidade para revezar ou compartilhar.</p>
+            <div class="price">R$ 222,22</div>
+            <div class="unit-price">R$ 111,11 por unidade</div>
+            <div class="price-perks">
+              <span>✓ Economia em relação ao kit avulso</span>
+              <span>✓ Frete grátis</span>
+              <span>✓ Pague só na entrega</span>
+            </div>
+            <a class="price-button" href="https://entrega.logzz.com.br/pay/fpsjn-programa-afiliados-remarketing-2" target="_blank" rel="noopener noreferrer">Quero Este Kit →</a>
+          </article>
+
+          <article class="price-card popular reveal">
+            <div class="popular-badge">Mais popular</div>
+            <div class="saving-badge">Melhor escolha</div>
+            <div class="kit-label">Kit 3</div>
+            <h3>3 unidades</h3>
+            <p class="units">A combinação mais procurada para uso contínuo em casa.</p>
+            <div class="price">R$ 240,00</div>
+            <div class="unit-price">R$ 80,00 por unidade</div>
+            <div class="price-perks">
+              <span>✓ Melhor custo por unidade</span>
+              <span>✓ Maior procura entre clientes</span>
+              <span>✓ Pague só na entrega</span>
+            </div>
+            <a class="price-button" href="https://entrega.logzz.com.br/pay/programa-afiliados-remarketing-3" target="_blank" rel="noopener noreferrer">Quero Este Kit →</a>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="saving-badge">Economize</div>
+            <div class="kit-label">Kit 4</div>
+            <h3>4 unidades</h3>
+            <p class="units">Perfeito para família ou uso em mais de uma rotina.</p>
+            <div class="price">R$ 380,00</div>
+            <div class="unit-price">R$ 95,00 por unidade</div>
+            <div class="price-perks">
+              <span>✓ Oferta para uso prolongado</span>
+              <span>✓ Frete grátis</span>
+              <span>✓ Pague só na entrega</span>
+            </div>
+            <a class="price-button" href="https://entrega.logzz.com.br/pay/programa-afiliados-remarketing-5" target="_blank" rel="noopener noreferrer">Quero Este Kit →</a>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="saving-badge">Leve mais</div>
+            <div class="kit-label">Kit 5</div>
+            <h3>5 unidades</h3>
+            <p class="units">Maior cobertura para casa inteira ou compra em grupo.</p>
+            <div class="price">R$ 400,00</div>
+            <div class="unit-price">R$ 80,00 por unidade</div>
+            <div class="price-perks">
+              <span>✓ Excelente para presentear</span>
+              <span>✓ Condição especial</span>
+              <span>✓ Pague só na entrega</span>
+            </div>
+            <a class="price-button" href="https://entrega.logzz.com.br/pay/programa-afiliados-remarketing-4" target="_blank" rel="noopener noreferrer">Quero Este Kit →</a>
+          </article>
+        </div>
+
+        <p class="pricing-note reveal">Você escolhe o kit com mais confiança, recebe no endereço informado e pode optar por pagar somente na entrega.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Quem compra recomenda</div>
+          <h2 class="section-title">Resultados percebidos logo nos primeiros dias</h2>
+          <p class="section-copy">Depoimentos que reforçam segurança, conforto e a tranquilidade de comprar com opção de pagamento na entrega.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card reveal">
+            <div class="testimonial-top">
+              <div class="avatar">MS</div>
+              <div>
+                <h3>Maria S., 52 anos</h3>
+                <p>Cliente verificada</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>Comprei 3 e dei uma para minha mãe. Em 2 dias já sentia diferença e ainda fiquei mais tranquila com a opção de pagar na entrega.</p>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="testimonial-top">
+              <div class="avatar">RC</div>
+              <div>
+                <h3>Roberto C., 61 anos</h3>
+                <p>Cliente verificado</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>Uso para caminhar e trabalhar. O joelho ficou mais firme, o material é confortável e a compra foi bem segura.</p>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="testimonial-top">
+              <div class="avatar">AL</div>
+              <div>
+                <h3>Ana L., 47 anos</h3>
+                <p>Cliente verificada</p>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>Gostei do ajuste e do suporte. Peguei o kit popular para usar em casa e deixar uma reserva. Valeu muito a pena.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="guarantee-box reveal">
+          <div class="guarantee-main">
+            <div class="shield" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3 4 7v5c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V7l-8-4Z"></path>
+                <path d="m9.5 12 1.7 1.7L15 10"></path>
+              </svg>
+            </div>
+            <div>
+              <h3>Garantia de 30 dias ou seu dinheiro de volta</h3>
+              <p>Compre com segurança. Se o produto não atender sua expectativa, você conta com garantia de satisfação e suporte dedicado no pós-venda.</p>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <article class="security-card">
+              <h3>Compra Segura SSL</h3>
+              <p>Ambiente protegido para seus dados e sua navegação.</p>
+            </article>
+
+            <article class="security-card">
+              <h3>Pix, Cartão e na Entrega</h3>
+              <p>Mais flexibilidade para finalizar do jeito que preferir.</p>
+            </article>
+
+            <article class="security-card">
+              <h3>Entrega Rápida</h3>
+              <p>Logística ágil para você receber o quanto antes.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-wrap">
+        <div>© 2026 Joelheira Ortopédica Premium. Todos os direitos reservados.</div>
+        <div class="footer-links">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+  </script>
+</body>
+</html>
