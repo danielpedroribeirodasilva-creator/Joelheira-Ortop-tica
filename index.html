@@ -287,6 +287,35 @@
       padding: 26px;
     }
 
+    @media (min-width: 1081px) {
+      .hero-card {
+        padding: 18px;
+      }
+
+      .hero-figure {
+        min-height: 680px;
+        padding: 18px;
+      }
+
+      .product-gallery {
+        grid-template-columns: 1.28fr 1fr;
+        min-height: 520px;
+      }
+
+      .product-photo {
+        min-height: 520px;
+      }
+
+      .product-photo:first-child {
+        min-height: 600px;
+      }
+
+      .product-photo img {
+        object-fit: contain;
+        background: #fff;
+      }
+    }
+
     .product-gallery {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
@@ -742,6 +771,10 @@
       .security-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 720px) {
@@ -1055,6 +1088,36 @@
         </div>
 
         <div class="pricing-grid">
+          <article class="price-card reveal">
+            <div class="saving-badge">Limitada</div>
+            <div class="kit-label">Kit Limitado</div>
+            <h3>1 unidade</h3>
+            <p class="units">Condição especial para quem quer aproveitar o menor valor de entrada.</p>
+            <div class="price">R$ 108,53</div>
+            <div class="unit-price">R$ 108,53 por unidade</div>
+            <div class="price-perks">
+              <span>✓ Oferta por tempo limitado</span>
+              <span>✓ Compra 100% segura</span>
+              <span>✓ Pague só na entrega</span>
+            </div>
+            <a class="price-button" href="https://entrega.logzz.com.br/pay/programa-afiliados-remarketing-8" target="_blank" rel="noopener noreferrer">Quero Este Kit →</a>
+          </article>
+
+          <article class="price-card reveal">
+            <div class="saving-badge">Leve 2</div>
+            <div class="kit-label">Kit Promo 2</div>
+            <h3>Compre 1 e leve 2</h3>
+            <p class="units">Oferta estratégica para garantir 2 unidades pagando menos por cada uma.</p>
+            <div class="price">R$ 192,90</div>
+            <div class="unit-price">R$ 96,45 por unidade</div>
+            <div class="price-perks">
+              <span>✓ 2 unidades por valor promocional</span>
+              <span>✓ Melhor que comprar avulso</span>
+              <span>✓ Pague só na entrega</span>
+            </div>
+            <a class="price-button" href="https://entrega.logzz.com.br/pay/compre-um-leve-2" target="_blank" rel="noopener noreferrer">Quero Este Kit →</a>
+          </article>
+
           <article class="price-card reveal">
             <div class="kit-label">Kit 1</div>
             <h3>1 unidade</h3>
